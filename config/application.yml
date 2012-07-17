@@ -165,11 +165,11 @@ defaults: &defaults
   mailer_method: 'smtp'
 
   # Address/port to smtp server handling outgoing mail.
-  smtp_address: 'smtp.example.com'
-  smtp_port: '587'
+  smtp_address: ENV['MAILGUN_SMTP_SERVER']
+  smtp_port: ENV['MAILGUN_SMTP_PORT']
 
   #API key if you are using message bus
-  message_bus_api_key: ''
+  message_bus_api_key: ENV['MAILGUN_API_KEY']
 
   # The path to the sendmail binary. Ignored if mailer_method is not set to sendmail
   sendmail_location: '/usr/sbin/sendmail'
@@ -193,15 +193,15 @@ defaults: &defaults
   # Domain of smtp server.
   # This should match the common name of the certificate
   # the SMTP server sends. If he sends one
-  smtp_domain: 'example.com'
+  smtp_domain: 'crowdint.com'
 
   # Credentials to log in to the SMTP server - may be necessary if
   # smtp_authentication is not 'none'
-  smtp_username: 'smtp_username'
-  smtp_password: 'secret'
+  smtp_username: ENV['MAILGUN_SMTP_LOGIN']
+  smtp_password: ENV['MAILGUN_SMTP_PASSWORD']
 
   # Sender address in Diaspora's outgoing mail.
-  smtp_sender_address: 'no-reply@joindiaspora.com'
+  smtp_sender_address: 'no-reply@diasporaci.com'
 
   ######################################################
   # Social Service Configuration
@@ -237,8 +237,8 @@ defaults: &defaults
   airbrake_api_key: ''
 
   ## If you use NewRelic provide your credentials here:
-  NEW_RELIC_LICENSE_KEY: ''
-  new_relic_app_name: ''
+  NEW_RELIC_LICENSE_KEY: ENV['NEW_RELIC_LICENSE_KEY']
+  new_relic_app_name: ENV['NEW_RELIC_APP_NAME']
 
 ######################################################
 # Overrides
