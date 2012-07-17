@@ -252,6 +252,8 @@ development:
 production:
   <<: *defaults
   jquery_cdn: true
+  serve_static_assets: true
+
 
 ##################################################
 # FEDERATION LOGGER ##############################
