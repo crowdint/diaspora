@@ -193,7 +193,7 @@ defaults: &defaults
   # Domain of smtp server.
   # This should match the common name of the certificate
   # the SMTP server sends. If he sends one
-  smtp_domain: 'crowdint.com'
+  smtp_domain: 'app5953589.mailgun.org'
 
   # Credentials to log in to the SMTP server - may be necessary if
   # smtp_authentication is not 'none'
