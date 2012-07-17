@@ -22,7 +22,8 @@ defaults: &defaults
   ## Setting the bundle of certificate authorities (CA) certificates.
   ## This is operating system specific.
   ## Examples, uncomment one or add your own:
-  ca_file: '/etc/pki/tls/certs/ca-bundle.crt'
+  # ca_file: '/etc/pki/tls/certs/ca-bundle.crt'
+  ca_file: '/usr/lib/ssl/certs/ca-certificates.crt' # Heroku
 
   ## URL for a remote redis, on the default port.
   ## Don't forget to restrict IP access!
