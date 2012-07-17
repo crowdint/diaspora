@@ -51,9 +51,9 @@ defaults: &defaults
   ## Use Amazon S3 instead of your local filesystem
   ## to handle uploaded pictures.
   # s3 config - if set, carrierwave will store your photos on s3. Otherwise they're on the filesystem.
-  #s3_key: 'key'
-  #s3_secret: 'secret'
-  #s3_bucket: 'my_photos'
+  s3_key: ENV['S3_KEY']
+  s3_secret: ENV['S3_SECRET']
+  s3_bucket: ENV['S3_BUCKET_NAME']
   s3_region: 'us-east-1'
 
   ## Related to S3 you can set a url to redirect all requests to uploaded
@@ -95,7 +95,7 @@ defaults: &defaults
   ######################################################
 
   ## Name of your pod
-  pod_name: "Diaspora*"
+  pod_name: "CI-Diaspora"
 
   ## Set this to true to prevent people from signing up for your pod
   ## without an invitation. Note that this needs to be true even for
@@ -115,7 +115,7 @@ defaults: &defaults
   ## admin accout, use roles instead. See
   ## https://github.com/diaspora/diaspora/wiki/FAQ-for-Pod-Maintainers
   ## "What are roles and how do I use them?")
-  admin_account: ''
+  admin_account: 'hector@crowdint.com'
 
   ## Settings about invitations
 
