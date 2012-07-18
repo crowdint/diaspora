@@ -8,22 +8,22 @@ app/assets/images/custom/*
 # config/app.yml
 # config/application.yml
 # config/heroku.yml
-config/script_server*.yml
+# config/script_server*.yml
 # config/fb_config.yml
 # config/oauth_keys.yml
-config/initializers/secret_token.rb
+# config/initializers/secret_token.rb
 # config/redis.conf
 # config/deploy_config.yml
-.bundle
-vendor/bundle/*
-vendor/cache/*
+# .bundle
+# vendor/bundle/*
+# vendor/cache/*
 config/database.yml
 .rvmrc_custom
 .rvmrc.local
 
 #Mailing list stuff
-config/email_offset
-config/mailing_list.csv
+# config/email_offset
+# config/mailing_list.csv
 
 # Generated files
 log/*
