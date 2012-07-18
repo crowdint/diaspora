@@ -28,6 +28,9 @@ before_fork do |server, worker|
   # disconnect redis if in use
   if !AppConfig.single_process_mode?
     Resque.redis.client.disconnect
+    # Clean up Resque workers killed by previous deploys/restarts
+    Resque.workers.each { |w| w.unregister_worker }
+    @resque_pid ||= spawn('bundle exec rake resque:work QUEUES=*')
   end
 
   old_pid = '/var/run/diaspora/diaspora.pid.oldbin'
